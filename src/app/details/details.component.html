@@ -1,0 +1,24 @@
+<div class="container">
+
+    <!-- Début partie spécifique home page -->
+    <div class="row" *ngIf="movie">
+      <div class="col-xs-12 col-sm-4">
+        <img class="details-img" src="https://image.tmdb.org/t/p/w780//1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" />
+      </div>
+      <div class="col-xs-12 col-sm-8">
+        <h2>{{ movie.title }}</h2>
+        <h3>{{ movie.tagline }}</h3>
+        <p class="meta-wrap">
+          <span class="rating">rating: {{ movie.vote_average }} / </span>
+          <span class="meta"><span *ngFor="let language of movie.spoken_languages">{{ language.english_name }} / </span>{{ movie. runtime}} min. / {{ movie.release_date | date: 'yyyy'}}</span>
+        </p>
+
+        <ul class="genres">
+          <li *ngFor="let genre of movie.genres">{{ genre.name }}</li>
+          <!-- <li>Adventure</li>
+          <li>Science-Fiction</li> -->
+        </ul>
+    </div>
+    <!-- Fin partie spécifique home page -->
+
+  </div>

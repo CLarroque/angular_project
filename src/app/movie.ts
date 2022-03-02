@@ -1,16 +1,22 @@
 export class Movie {
-    adult!: boolean;
-    genre_ids!: number[];
-    id!: number;
-    original_language!: string;
-    original_title!: string;
-    overview!: string;
-    popularity!: number;
-    release_date!: string;
-    title!: string;
-    video!: boolean;
-    vote_average!: number;
-    vote_count!: number;
-    poster_path!: string;
-    backdrop_path!: string;
+    id!: number; 
+    release_date!: Date; 
+    title!: string;     
+    vote_average!: number; 
+    poster_path!: string; 
+    tagline!: string; 
+    runtime!: number; 
+    spoken_languages!: Language[];
+    genres!: Genre[];
   }
+
+export class Language {
+  english_name!: string;
+  iso_639_1!: string;
+  name!: string;
+}
+
+export class Genre {
+  id!: number;
+  name!: string;
+}
