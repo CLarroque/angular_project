@@ -8,6 +8,7 @@ export class Movie {
     runtime!: number; 
     spoken_languages!: Language[];
     genres!: Genre[];
+    genre_ids!: number [];
   }
 
 export class Language {
