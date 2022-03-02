@@ -1,9 +1,8 @@
 <div class="container">
 
-    <!-- Début partie spécifique home page -->
     <div class="row" *ngIf="movie">
       <div class="col-xs-12 col-sm-4">
-        <img class="details-img" src="https://image.tmdb.org/t/p/w780//1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" />
+        <img class="details-img" [src]="movie.poster_path" />
       </div>
       <div class="col-xs-12 col-sm-8">
         <h2>{{ movie.title }}</h2>
@@ -15,10 +14,7 @@
 
         <ul class="genres">
           <li *ngFor="let genre of movie.genres">{{ genre.name }}</li>
-          <!-- <li>Adventure</li>
-          <li>Science-Fiction</li> -->
         </ul>
     </div>
-    <!-- Fin partie spécifique home page -->
 
   </div>
